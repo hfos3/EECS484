@@ -1,5 +1,4 @@
 -- View_User_Information
--- NOT SURE IF I NEED TO ADD IS NOT NULL FLAGS TO THE END OF ANY OF THE WHERE STATEMENTS FOR HOMETOWN AND CURRENT BC ALL IN TABLE ALR
 CREATE VIEW View_User_Information AS 
 SELECT u.user_id, u.first_name, u.last_name, u.year_of_birth, u.month_of_birth, u.day_of_birth, u.gender, acc.city_name AS current_city, acc.state_name AS current_state, acc.country_name AS current_country, ah.city_name AS hometown_city, ah.state_name AS hometown_state, ah.country_name AS hometown_country, p.institution, e.program_year, p.concentration, p.degree
 FROM Users u 
