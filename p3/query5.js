@@ -16,7 +16,6 @@ function oldest_friend(dbname) {
     db.users.find().forEach(function(U){
         let yob = Number.MAX_SAFE_INTEGER;
         let uid = Number.MAX_SAFE_INTEGER;
-        //I forgot to do this before, if we've already seen a younger friend of U, then we don't want to overwrite
         //results[U.user_id] could be already defined
         if(results.hasOwnProperty(U.user_id)){
             let overwrite = db.users.findOne({"user_id":results[U.user_id]});
